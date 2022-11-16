@@ -1,2 +1,15 @@
-# cogsys-custom-cnn
-Code for Master Thesis Dissertation on Cognitive Systems - OUC with title: Creation and Analysis of an Explainable Deep Learning System
+# Creation And Analysis Of An Explainable Deep Learning System
+
+Deep learning models represent the cutting edge in Artificial Intelligence - AI. However, they lack one key element, explainability. Even though such models are able to perform so accurately, they act as black boxes, without us having any insight into how they made a classification and what drove them to reach a certain conclusion. This problem concerns the researchers for many years, as explainability is of utmost importance in order to use Deep Learning models in critical applications, such as those in medical, finance and automotive sectors. Explainable AI, in general, consists of a set of methods and processes that allow the users to understand and trust the results of the AI model, due to the fact that there is clarity in the decision making, and we can easily characterize accuracy, transparency and fairness of the model, even in complex processes. This will help AI to become more responsible to its decisions, more trustworthy and will help larger sectors and industries to adopt it. In recent years, researchers developed various techniques, which can identify the reasons behind the decision of a deep learning model. Not only that, but these techniques inspire and pave the way for new methods to be developed. Class Activation Mapping for example, designed to produce heatmaps to highlight the region of the image which the deep learning model focused on in order to classify it. The visualization of where the model is looking helps to identify whether the model is trustful or is cheating. For example, a deep learning model could classify a train image, not by looking at the actual train, but by looking at the train tracks. Despite the correct classification, the model might take into account wrong parts of the image, which could be a consequence of poor training. A more evolved technique which is based on Class Activation mapping, is Grad-CAM. This technique is considered class-specific, meaning that for the same image, it can produce a separate visualization for each class which is present in an image. Another interesting approach is Structured Attention Graphs (SAGs). This method is inspired from attention maps, which are popular tools for explaining the decision of deep learning models. The researchers argue that just one attention map is not enough. With SAGs, we can have a set of attention maps and we can capture the confidence level of the model on each one and how the classifier is impacted. This thesis will mainly focus on Grad-Class Activation mapping and Structured Attention Graphs that were mentioned above, and try to understand and explain the procedures behind the image classification. We will benchmark the techniques and see how they apply in various datasets. We also analyze their role in the general structure of explainable artificial intelligence.
+
+## Flowchart
+
+A basic flowchart of the code is the following:
+
+1. Define the hyperparameters of the custom CNN (config.py)
+2. Create and prepare the dataset in order to be model-compatible (dataset.py)
+3. Create, configure and modify the model properly  (model.py)
+4. Train the model (train.py)
+5. Save the model (save.py)
+6. Save the model statistics in a report (metrics.py)
+7. Upload model metrics to tensorboard and create the appropriate url (main.py)
